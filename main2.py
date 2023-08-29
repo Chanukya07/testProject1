@@ -1,30 +1,15 @@
-class Stack:
-    def __init__(self):
-        self.items = []
-
-    def push(self, item):
-        self.items.append(item)
-
-    def pop(self):
-        return self.items.pop()
-
-    def is_empty(self):
-        return len(self.items) == 0
-
-    def peek(self):
-        return self.items[-1]
+def bubble_sort(array):
+    for i in range(len(array) - 1):
+        for j in range(len(array) - i - 1):
+            if array[j] > array[j + 1]:
+                array[j], array[j + 1] = array[j + 1], array[j]
 
 
-def main2():
-    stack = Stack()
-    stack.push(1)
-    stack.push(2)
-    stack.push(3)
-
-    print(stack.peek())
-    print(stack.pop())
-    print(stack.pop())
-    print(stack.is_empty())
+def main():
+    array = [10, 8, 2, 4, 6, 7, 5, 9]
+    print("Unsorted array:", array)
+    bubble_sort(array)
+    print("Sorted array:", array)
 
 
 if __name__ == "__main__":
