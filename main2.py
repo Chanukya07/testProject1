@@ -15,7 +15,7 @@ class Stack:
         return self.items[-1]
 
 
-def main():
+def main2():
     stack = Stack()
     stack.push(1)
     stack.push(2)
